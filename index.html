@@ -1,12 +1,142 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello World</h1>
-    <body><a href="habbits.html">Habbits</a></body>h2>
-</body>
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>صفحتي الشخصية | أدواتي ومشاريعي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg-color: #0f172a;
+        --card-bg: #1e293b;
+        --text-color: #f8fafc;
+        --accent-color: #38bdf8;
+        --hover-color: #0ea5e9;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        font-family: "Cairo", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 500px;
+        padding: 20px;
+        text-align: center;
+      }
+
+      /* الصورة الشخصية أو الأفاتار */
+      .profile-img {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        border: 3px solid var(--accent-color);
+        margin-bottom: 15px;
+        object-fit: cover;
+        box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+      }
+
+      h1 {
+        font-size: 1.8rem;
+        margin: 10px 0;
+        font-weight: 700;
+      }
+
+      .bio {
+        font-size: 1rem;
+        color: #94a3b8;
+        margin-bottom: 30px;
+        font-weight: 300;
+      }
+
+      /* قسم الروابط والأدوات */
+      .links-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .link-card {
+        background-color: var(--card-bg);
+        color: var(--text-color);
+        text-decoration: none;
+        padding: 16px;
+        border-radius: 12px;
+        font-size: 1.1rem;
+        font-weight: 400;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      /* تأثيرات الحركة عند تمرير الماوس */
+      .link-card:hover {
+        background-color: var(--accent-color);
+        color: #000;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2);
+        font-weight: 700;
+      }
+
+      footer {
+        margin-top: 40px;
+        font-size: 0.8rem;
+        color: #64748b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=150"
+        alt="Profile"
+        class="profile-img"
+      />
+
+      <h1>مرحباً بك في عالمي الرقمي</h1>
+
+      <p class="bio">
+        مطور برمجيات أشارككم هنا الأدوات والتطبيقات المصغرة التي أقوم ببنائها
+        لتسهيل حياتنا الرقمية.
+      </p>
+
+      <div class="links-container">
+        <a href="habbits.html" class="link-card">
+          🎯 تطبيق تتبع العادات (Habbits)
+        </a>
+
+        <a href="#" class="link-card"> 🛠️ أداة تحويل الملفات (قريباً) </a>
+
+        <a href="#" class="link-card"> 📝 مفكرة الملاحظات السريعة (قريباً) </a>
+
+        <a
+          href="https://github.com/"
+          class="link-card"
+          style="border-color: #64748b"
+        >
+          🐙 تابعني على GitHub
+        </a>
+      </div>
+
+      <footer>صُنع بحب بواسطة أنت © 2026</footer>
+    </div>
+  </body>
 </html>
