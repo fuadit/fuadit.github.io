@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  /* تعريف الخط الافتراضي للنظام */
+  --font-sans: 'Cairo', 'Inter', sans-serif;
+
+  /* تعريف الحواف الدائرية المستوحاة من Material 3 */
+  --radius-m3-sm: 8px;
+  --radius-m3-md: 12px;
+  --radius-m3-lg: 16px;
+  --radius-m3-full: 100px;
+
+  /* لوحة ألوان النظام للمظهر المضيء */
+  --color-sys-light-primary: #6750A4;
+  --color-sys-light-on-primary: #FFFFFF;
+  --color-sys-light-secondary: #625B71;
+  --color-sys-light-background: #FEF7FF;
+  --color-sys-light-surface: #F3EDF7;
+  --color-sys-light-error: #B3261E;
+
+  /* لوحة ألوان النظام للمظهر المظلم */
+  --color-sys-dark-primary: #D0BCFF;
+  --color-sys-dark-on-primary: #381E72;
+  --color-sys-dark-secondary: #CCC2DC;
+  --color-sys-dark-background: #141218;
+  --color-sys-dark-surface: #211F26;
+  --color-sys-dark-error: #F2B8B5;
+}
+
+/* تخصيصات عامة للموقع */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-sys-light-background);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.dark body {
+  background-color: var(--color-sys-dark-background);
+}
