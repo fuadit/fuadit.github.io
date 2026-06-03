@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 import tailwindcss from '@tailwindcss/vite'
 
-const repoName = '/fuadit.github.io/';
+const repoName = '';
 
 // https://vite.dev/config/
 export default defineConfig({
