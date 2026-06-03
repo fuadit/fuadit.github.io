@@ -1,6 +1,7 @@
 // src/App.tsx
 import React, { useState, useEffect } from 'react';
 import { Sun, Moon, Briefcase, Code, User, ArrowDown, ExternalLink } from 'lucide-react';
+import UpdateNotification from './components/UpdateNotification';
 
 interface Project {
   title: string;
@@ -142,6 +143,8 @@ export default function App(): React.JSX.Element {
         </div>
       </footer>
 
+{/* مكون التنبيه بالتحديث الذكي */}
+      <UpdateNotification />
     </div>
   );
 }
