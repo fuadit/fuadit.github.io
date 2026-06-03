@@ -1,6 +1,6 @@
 // src/App.tsx
 import React, { useState, useEffect } from 'react';
-import { Sun, Moon, Briefcase, Code, User, MessageSquare, ArrowDown, ExternalLink } from 'lucide-react';
+import { Sun, Moon, Briefcase, Code, User, ArrowDown, ExternalLink } from 'lucide-react';
 
 interface Project {
   title: string;
