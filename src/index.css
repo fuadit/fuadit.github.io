@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @import "tailwindcss";
 
@@ -7,6 +8,7 @@
 @theme {
   /* تعريف الخط الافتراضي للنظام */
   --font-sans: 'Cairo', 'Inter', sans-serif;
+  --font-amiri: "Amiri", serif;
 
   /* تعريف الحواف الدائرية المستوحاة من Material 3 */
   --radius-m3-sm: 8px;

@@ -2,6 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import { Sun, Moon, Briefcase, Code, BookOpen, ArrowDown, ExternalLink, Terminal } from 'lucide-react';
 import UpdateNotification from './components/UpdateNotification';
+import HijriCard from './components/HijriCard';
+import WeatherCard from './components/WeatherCard';
+import MotivationalQuote from './components/MotivationalQuote';
 
 interface Project {
   title: string;
@@ -63,7 +66,7 @@ export default function App(): React.JSX.Element {
 
   return (
     <div className="min-h-screen bg-sys-light-background dark:bg-sys-dark-background text-gray-800 dark:text-gray-100 transition-colors duration-300 font-sans" dir="rtl">
-      
+    
       {/* 1. شريط التنقل المبسط */}
       <nav className="sticky top-0 z-50 backdrop-blur-md bg-sys-light-background/80 dark:bg-sys-dark-background/80 border-b border-gray-200/50 dark:border-gray-800/50 px-6 py-4">
         <div className="max-w-5xl mx-auto flex justify-between items-center">
@@ -91,6 +94,13 @@ export default function App(): React.JSX.Element {
         </div>
       </nav>
 
+
+{/* شريط المعلومات العلوي الذكي */}
+<div className="max-w-3xl mx-auto px-6 pt-8 w-full grid grid-cols-2 gap-3 items-stretch">
+        <HijriCard />
+        <WeatherCard />
+        <MotivationalQuote /> {/* المكون المستقل سيعرض نفسه بالسطر الثاني تلقائياً */}
+      </div>
       {/* 2. قسم الهيرو (Hero Section) */}
       <section id="hero" className="max-w-3xl mx-auto px-6 pt-24 pb-16 flex flex-col items-center text-center justify-center min-h-[65vh]">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 leading-tight">
