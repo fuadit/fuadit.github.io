@@ -1,6 +1,6 @@
 // src/App.tsx
 import React, { useState, useEffect } from 'react';
-import { Sun, Moon, Briefcase, Code, BookOpen, ArrowDown, ExternalLink, Terminal } from 'lucide-react';
+import { Briefcase, Code, BookOpen, ArrowDown, ExternalLink } from 'lucide-react';
 import UpdateNotification from './components/UpdateNotification';
 import HijriCard from './components/HijriCard';
 import WeatherCard from './components/WeatherCard';
