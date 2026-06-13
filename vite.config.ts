@@ -10,15 +10,15 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
-      registerType: 'autoUpdate',
+      registerType: 'prompt',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
       injectRegister: 'inline', // تضمين كود التسجيل مباشرة داخل الـ HTML لضمان قراءته
       // 2. ضبط المسارات لـ GitHub Pages
       base: repoName,
       manifest: {
         name: 'الموقع الشخصي - نظام التصميم الخاص بي',
-        short_name: 'موقعي',
-        description: 'موقعي الشخصي ومعرض أعمالي ببنية Material Design',
+        short_name: 'فؤاد المهاوش',
+        description: 'موقع شخصي يعرض أعمالي ومشاريعي باستخدام نظام التصميم الخاص بي.',
         theme_color: '#6750A4', // نفس اللون الأساسي (Primary)
         background_color: '#FEF7FF',
         display: 'standalone',
@@ -26,12 +26,12 @@ export default defineConfig({
         dir: 'rtl', // لدعم اللغة العربية بشكل صحيح كتطبيق
         icons: [
           {
-            src: `${repoName}pwa-192x192.png`,
+            src: `${repoName}android-chrome-192x192.png`,
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: `${repoName}pwa-512x512.png`,
+            src: `${repoName}android-chrome-512x512.png`,
             sizes: '512x512',
             type: 'image/png',
             purpose: 'any maskable'
@@ -42,6 +42,9 @@ export default defineConfig({
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'], // الملفات التي سيتم حفظها في الكاش
         navigateFallback: `${repoName}index.html`, // لضمان عمل الـ Routing عند تحديث الصفحة
+
+        skipWaiting: false, // نتركها false لأننا نستخدم prompt، ولكن سنفعلها عبر الكود
+        clientsClaim: true, // نريد أن يسيطر الـ Service Worker على كل الـ Clients فور التثبيت
       }
     }),
     tailwindcss(),
