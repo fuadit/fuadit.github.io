@@ -7,6 +7,7 @@ import WeatherCard from './components/WeatherCard';
 import MotivationalQuote from './components/MotivationalQuote';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
+import PrayerTimesCard from './components/PrayerTimesCard';
 
 interface Project {
   title: string;
@@ -94,6 +95,7 @@ const blogPosts: BlogPost[] = [
           <div className="max-w-3xl mx-auto px-6 pt-8 w-full grid grid-cols-2 gap-3 items-stretch">
             <HijriCard />
             <WeatherCard />
+            <PrayerTimesCard />
             <MotivationalQuote />
           </div>
 
