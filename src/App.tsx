@@ -8,6 +8,7 @@ import MotivationalQuote from './components/MotivationalQuote';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import PrayerTimesCard from './components/PrayerTimesCard';
+import RpgTasks from './components/RpgTasks';
 
 interface Project {
   title: string;
@@ -97,6 +98,7 @@ const blogPosts: BlogPost[] = [
             <WeatherCard />
             <PrayerTimesCard />
             <MotivationalQuote />
+            <RpgTasks />
           </div>
 
           {/* الأقسام الأساسية للموقع */}
